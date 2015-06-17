@@ -1,0 +1,33 @@
+1.
+Logger logger = LoggerFactory.getLogger(WeatherDataAnalyzer.class);
+
+2.Always give the full path
+File file = new File("C:\\Users\\swathi\\IdeaProjects\\csvFile\\kata1\\weather.dat");
+
+3.Save the values as objects. and provide getters for that instead of using map
+
+4.line.split("\\s+"); is used to split the data with more than one space , tab
+
+5 whenevr there is space in the beginning start the idexing as split[1]. Because the both the ends of split is given the index. And if there is space in the beginning, first end of the split is null. so null is returned for split[0]
+
+6.DRY-Dont repeat yourself
+
+                    int day = parseInt(split[1]);
+                    int maxTemp = parseInt(split[2]);
+                    int minTemp = parseInt(split[3]);
+
+                       private int parseInt(String s) {
+                               try{
+                                   return Integer.parseInt(s);
+                               }
+                               catch (Exception e){
+                                   logger.warn("Invalid data " + s);
+                                   return  0;
+
+                               }
+
+
+
+compare(o1 , o2)
+returns -1 if o1 has to come before o2
++1 if o1 has to come after  o2
