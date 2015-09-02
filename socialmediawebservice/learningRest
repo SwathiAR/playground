@@ -1,0 +1,5 @@
+Jax-B which coms bundled with Java helps in XML to Java object conversion
+Need to add XMLRootElement annotation to model xml class
+
+There is no jar available for jason to java object conversion
+We need to add maven dependancy 
