@@ -1,16 +1,8 @@
 /**
  * Created by swathi on 9/1/2015.
  */
-public class LinkedListOperations {
-    public int listLength(SinglyLinkedListNode headNode) {
-        int length = 0;
-        SinglyLinkedListNode currentNode = headNode;
-        while (currentNode != null) {
-            length++;
-            currentNode = currentNode.getNext();
-        }
-        return length;
-    }
+public class SinglyLinkedListOperations extends LinkedListOperation {
+
 
     public SinglyLinkedListNode insertInLinkedList(SinglyLinkedListNode headNode, SinglyLinkedListNode nodeToInsert, int position) {
 

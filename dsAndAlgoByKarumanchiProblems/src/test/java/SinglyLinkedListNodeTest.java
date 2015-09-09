@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
  * Created by swathi on 9/2/2015.
  */
 public class SinglyLinkedListNodeTest {
-    LinkedListOperations linkedListOperations = new LinkedListOperations();
+    SinglyLinkedListOperations linkedListOperations = new SinglyLinkedListOperations();
 
     @Test
             public void testLinkedList() {
