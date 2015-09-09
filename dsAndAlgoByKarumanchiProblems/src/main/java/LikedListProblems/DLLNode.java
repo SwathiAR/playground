@@ -1,3 +1,5 @@
+package LikedListProblems;
+
 /**
  * Created by swathi on 9/2/2015.
  */
@@ -50,7 +52,7 @@ public class DLLNode {
 
     @Override
     public String toString() {
-        return "DLLNode{" +
+        return "LikedListProblems.DLLNode{" +
                 "data=" + data +
                 ", next=" + next +
                 '}';

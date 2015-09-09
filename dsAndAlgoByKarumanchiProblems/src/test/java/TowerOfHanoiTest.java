@@ -1,6 +1,5 @@
+import Recursion.TowerOfHanoi;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
 
 /**
  * Created by swathi on 8/20/2015.

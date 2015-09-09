@@ -1,3 +1,5 @@
+package LikedListProblems;
+
 /**
  * Created by swathi on 9/1/2015.
  */
@@ -20,7 +22,7 @@ public class SinglyLinkedListNode {
 
     @Override
     public String toString() {
-        return "SinglyLinkedListNode{" +
+        return "LikedListProblems.SinglyLinkedListNode{" +
                 "data=" + data +
                 ", next=" + next +
                 '}';
