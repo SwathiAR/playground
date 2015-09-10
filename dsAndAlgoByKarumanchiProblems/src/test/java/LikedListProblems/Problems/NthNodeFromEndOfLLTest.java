@@ -41,5 +41,11 @@ public class NthNodeFromEndOfLLTest {
         Assert.assertEquals("LikedListProblems.SinglyLinkedListNode{data=swat, next=LikedListProblems.SinglyLinkedListNode{data=swa, next=LikedListProblems.SinglyLinkedListNode{data=sw, next=LikedListProblems.SinglyLinkedListNode{data=s, next=null}}}}",
                 nthNodeFromEndOfLL.findnthNodeUsingHashTable(4, singlyLinkedList.getHeadNode()).toString());
 
+        Assert.assertEquals("LikedListProblems.SinglyLinkedListNode{data=swat, next=LikedListProblems.SinglyLinkedListNode{data=swa, next=LikedListProblems.SinglyLinkedListNode{data=sw, next=LikedListProblems.SinglyLinkedListNode{data=s, next=null}}}}",
+                nthNodeFromEndOfLL.findnthNodeByLength(4, singlyLinkedList.getHeadNode()).toString());
+
+        Assert.assertEquals("LikedListProblems.SinglyLinkedListNode{data=swat, next=LikedListProblems.SinglyLinkedListNode{data=swa, next=LikedListProblems.SinglyLinkedListNode{data=sw, next=LikedListProblems.SinglyLinkedListNode{data=s, next=null}}}}",
+                nthNodeFromEndOfLL.findnthNode(4, singlyLinkedList.getHeadNode()).toString());
+
     }
 }
