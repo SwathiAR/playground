@@ -7,24 +7,8 @@ import LikedListProblems.DLLNode;
  */
 public class LinkedListOperation {
 
-    public int listLength(SinglyLinkedListNode headNode) {
-        int length = 0;
-        SinglyLinkedListNode currentNode = headNode;
-        while (currentNode != null) {
-            length++;
-            currentNode = currentNode.getNext();
-        }
-        return length;
-    }
 
 
-    public int listLength(DLLNode headNode) {
-        int length = 0;
-        DLLNode currentNode = headNode;
-        while (currentNode != null) {
-            length++;
-            currentNode = currentNode.getNext();
-        }
-        return length;
-    }
+
+
 }

@@ -1,7 +1,5 @@
 package LikedListProblems;
 
-import LikedListProblems.DLLNode;
-
 /**
  * Created by swathi on 9/3/2015.
  */
@@ -10,6 +8,17 @@ public class DoublyLinkedList extends LinkedListOperation {
     private DLLNode head;
     private DLLNode tail;
     private int length;
+
+
+    public int getLength(DLLNode headNode) {
+        length = 0;
+        DLLNode currentNode = headNode;
+        while (currentNode != null) {
+            length++;
+            currentNode = currentNode.getNext();
+        }
+        return length;
+    }
 
     public  DoublyLinkedList(){
 
@@ -49,7 +58,7 @@ public class DoublyLinkedList extends LinkedListOperation {
     }
 
     private DLLNode getPreviousNode(DLLNode headNode , int position) {
-        int length = listLength(headNode);
+        int length = getLength(headNode);
         if (position < 0 || position > length + 1) {
             System.out.println("Invalid position");
             return null;
@@ -72,7 +81,7 @@ public class DoublyLinkedList extends LinkedListOperation {
 
 
     public DLLNode deleteNode(int position){
-        if(position == 0 || position > listLength(head)){
+        if(position == 0 || position > getLength(head)){
             System.out.println("Invalid position");
         }
 

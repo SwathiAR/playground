@@ -1,17 +1,47 @@
 package LikedListProblems;
 
-import LikedListProblems.LinkedListOperation;
-import LikedListProblems.SinglyLinkedListNode;
-
 /**
  * Created by swathi on 9/1/2015.
  */
-public class SinglyLinkedListOperations extends LinkedListOperation {
+public class SinglyLinkedList  {
+
+    public SinglyLinkedListNode getHeadNode() {
+        return headNode;
+    }
+
+    public void setHeadNode(SinglyLinkedListNode headNode) {
+        this.headNode = headNode;
+    }
+
+    public SinglyLinkedListNode getTail() {
+        return tail;
+    }
+
+    public void setTail(SinglyLinkedListNode tail) {
+        this.tail = tail;
+    }
+
+    private SinglyLinkedListNode headNode;
+    private SinglyLinkedListNode tail;
+    private int length;
 
 
-    public SinglyLinkedListNode insertInLinkedList(SinglyLinkedListNode headNode, SinglyLinkedListNode nodeToInsert, int position) {
+
+    public int getLength(SinglyLinkedListNode headNode) {
+         length = 0;
+        SinglyLinkedListNode currentNode = headNode;
+        while (currentNode != null) {
+            length++;
+            currentNode = currentNode.getNext();
+        }
+        return length;
+    }
+
+
+    public SinglyLinkedListNode insertInLinkedList( SinglyLinkedListNode nodeToInsert, int position) {
 
         if (headNode == null) {
+            headNode = nodeToInsert;
             return nodeToInsert;
         }
 
@@ -29,7 +59,7 @@ public class SinglyLinkedListOperations extends LinkedListOperation {
         return headNode;
     }
 
-    public SinglyLinkedListNode deleteNodeFromLinkedList(SinglyLinkedListNode headNode, int position) {
+    public SinglyLinkedListNode deleteNodeFromLinkedList( int position) {
 
         if (position == 1) {
             SinglyLinkedListNode currentNode = headNode.getNext();
@@ -47,7 +77,7 @@ public class SinglyLinkedListOperations extends LinkedListOperation {
     }
 
     private SinglyLinkedListNode getpreviousNode(SinglyLinkedListNode headNode, int position) {
-        int length = listLength(headNode);
+        int length = getLength(headNode);
         if (position < 1 || position > length + 1) {
             System.out.println("invalid position");
         }
@@ -61,6 +91,13 @@ public class SinglyLinkedListOperations extends LinkedListOperation {
         return previousNode;
     }
 
-
+    @Override
+    public String toString() {
+        return "SinglyLinkedList{" +
+                "headNode=" + headNode +
+                ", tail=" + tail +
+                ", length=" + length +
+                '}';
+    }
 }
 
