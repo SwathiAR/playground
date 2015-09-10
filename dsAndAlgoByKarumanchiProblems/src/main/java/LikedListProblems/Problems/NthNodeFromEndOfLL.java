@@ -3,6 +3,8 @@ package LikedListProblems.Problems;
 import LikedListProblems.SinglyLinkedListNode;
 import LikedListProblems.SinglyLinkedList;
 
+import java.util.Hashtable;
+
 /**
  * Created by swathi on 9/9/2015.
  */
@@ -17,19 +19,36 @@ public class NthNodeFromEndOfLL {
             count++;
         }
         if (count < n - 1) {
-            System.out.println("There are a fewer number of nodes in the list");
             return null;
         }
         if (count == n - 1) {
-            System.out.println("Found node");
             return headNode;
         }
 
         if (count > n - 1) {
-            System.out.println("There aare more nodes");
-            findNthNodeFromEnd(n, headNode.getNext());
+            return findNthNodeFromEnd(n, headNode.getNext());
         }
         return headNode;
 
     }
+
+    //Using Hash Map
+    public  SinglyLinkedListNode findnthNodeUsingHashTable(int n , SinglyLinkedListNode headNode){
+
+        SinglyLinkedListNode temp = headNode;
+        Hashtable<Integer , SinglyLinkedListNode> table = new Hashtable<Integer, SinglyLinkedListNode>();
+        int count=0;
+
+        while(temp.getNext()!=null){
+            table.put(count++, temp);
+            temp  = temp.getNext();
+        }
+        return table.get(count-n+1);
+
+    }
+
+
+
+
+
 }

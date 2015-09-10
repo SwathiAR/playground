@@ -34,7 +34,12 @@ public class NthNodeFromEndOfLLTest {
         singlyLinkedList.insertInLinkedList(node5 , 6);
 
 
-       Assert.assertEquals("LikedListProblems.SinglyLinkedListNode{data=sw, next=null}",
-               nthNodeFromEndOfLL.findNthNodeFromEnd(4, singlyLinkedList.getHeadNode()).toString());
+
+       Assert.assertEquals("LikedListProblems.SinglyLinkedListNode{data=swat, next=LikedListProblems.SinglyLinkedListNode{data=swa, next=LikedListProblems.SinglyLinkedListNode{data=sw, next=LikedListProblems.SinglyLinkedListNode{data=s, next=null}}}}",
+                nthNodeFromEndOfLL.findNthNodeFromEnd(4, singlyLinkedList.getHeadNode()).toString());
+
+        Assert.assertEquals("LikedListProblems.SinglyLinkedListNode{data=swat, next=LikedListProblems.SinglyLinkedListNode{data=swa, next=LikedListProblems.SinglyLinkedListNode{data=sw, next=LikedListProblems.SinglyLinkedListNode{data=s, next=null}}}}",
+                nthNodeFromEndOfLL.findnthNodeUsingHashTable(4, singlyLinkedList.getHeadNode()).toString());
+
     }
 }
