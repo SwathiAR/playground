@@ -3,12 +3,12 @@ package LikedListProblems;
 /**
  * Created by swathi on 9/1/2015.
  */
-public class SinglyLinkedListNode {
-    public Object getData() {
+public class SinglyLinkedListNode<T extends Comparable> {
+    public T getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 
@@ -22,16 +22,15 @@ public class SinglyLinkedListNode {
 
     @Override
     public String toString() {
-        return "LikedListProblems.SinglyLinkedListNode{" +
-                "data=" + data +
-                ", next=" + next +
-                '}';
+        return "" + data + "--->" +
+                "" + next ;
     }
 
-    private Object data;
+    private T data;
+
     private SinglyLinkedListNode next;
 
-    public SinglyLinkedListNode(Object data){
+    public SinglyLinkedListNode(T data){
         this.data = data;
     }
 

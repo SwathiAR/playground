@@ -3,7 +3,7 @@ package LikedListProblems;
 /**
  * Created by swathi on 9/8/2015.
  */
-public class CircularLinkedList {
+public class CircularLinkedList<T extends Comparable> {
 
     private SinglyLinkedListNode head;
     private int length = 0;
@@ -26,7 +26,7 @@ public class CircularLinkedList {
         return length;
     }
 
-    public SinglyLinkedListNode addToTheTail(Object data) {
+    public SinglyLinkedListNode addToTheTail(T data) {
 
         SinglyLinkedListNode node = new SinglyLinkedListNode(data);
 
@@ -47,13 +47,13 @@ public class CircularLinkedList {
 
     }
 
-    public SinglyLinkedListNode addToTheHead(Object data) {
+    public SinglyLinkedListNode addToTheHead(T data) {
         head = addToTheTail(data);
         return head;
 
     }
 
-    public SinglyLinkedListNode addInTheMiddle(Object data, int position) {
+    public SinglyLinkedListNode addInTheMiddle(T data, int position) {
         SinglyLinkedListNode node = new SinglyLinkedListNode(data);
         int length = listLength(head);
         if (position < 0 || position > length + 1) {

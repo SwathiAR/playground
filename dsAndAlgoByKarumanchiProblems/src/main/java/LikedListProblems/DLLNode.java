@@ -3,9 +3,9 @@ package LikedListProblems;
 /**
  * Created by swathi on 9/2/2015.
  */
-public class DLLNode {
+public class DLLNode<T extends Comparable> {
 
-    private Object data;
+    private T data;
     private DLLNode next;
     private  DLLNode previous;
 
@@ -13,24 +13,24 @@ public class DLLNode {
 
     }
 
-    public DLLNode(Object data){
+    public DLLNode(T data){
         this.data = data;
         next = null;
         previous = null;
     }
 
-    public DLLNode(Object data , DLLNode previous , DLLNode next){
+    public DLLNode(T data , DLLNode previous , DLLNode next){
         this.data = data;
         this.previous = previous;
         this.next = next;
 
     }
 
-    public Object getData(){
+    public T getData(){
         return data;
     }
 
-    public void setData(Object data){
+    public void setData(T data){
         this.data = data;
     }
 

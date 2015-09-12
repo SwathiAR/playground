@@ -3,7 +3,7 @@ package LikedListProblems;
 /**
  * Created by swathi on 9/3/2015.
  */
-public class DoublyLinkedList extends LinkedListOperation {
+public class DoublyLinkedList<T extends Comparable> extends LinkedListOperation {
 
     private DLLNode head;
     private DLLNode tail;
@@ -24,7 +24,7 @@ public class DoublyLinkedList extends LinkedListOperation {
 
     }
 
-    public DLLNode insertNode(Object data , int position){
+    public DLLNode insertNode(T data , int position){
         if( head == null){
             head = new DLLNode(data);
             tail = head;
