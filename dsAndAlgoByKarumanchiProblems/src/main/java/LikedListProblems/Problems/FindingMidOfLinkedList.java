@@ -55,17 +55,14 @@ public class FindingMidOfLinkedList {
         SinglyLinkedListNode fast = headNode;
         SinglyLinkedListNode slow = headNode;
 
-        if(fast==null){
-            return null;
-        }
 
-        while(fast.getNext()!= null && fast.getNext().getNext() != null){
+        while( fast.getNext()!= null && fast.getNext().getNext() != null){
             fast = fast.getNext().getNext();
             slow = slow.getNext();
 
         }
 
-        return  slow;
+         return slow;
     }
 
 
