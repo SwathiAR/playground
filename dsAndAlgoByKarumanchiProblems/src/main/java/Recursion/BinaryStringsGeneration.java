@@ -6,7 +6,8 @@ import java.util.Arrays;
 /**
  * Created by swathi on 8/21/2015.
  */
-public class BinaryStringsGeneration {
+public class
+        BinaryStringsGeneration {
 
     public void generate(int n){
         generateUlta(n,new int[n]);

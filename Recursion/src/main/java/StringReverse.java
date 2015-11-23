@@ -3,13 +3,29 @@
  */
 public class StringReverse {
 
-    public String reverseGivenString(String s){
-        char[] chars = s.toCharArray();
+    public String reverseGivenString(String str){
+        /*char[] chars = s.toCharArray();
         char[] reverseOfChars = new char[chars.length];
         for(int i=0;i<chars.length ;i++){
             reverseOfChars [i] =chars[chars.length-1-i];
         }
-        return String.valueOf(reverseOfChars);
+        return String.valueOf(reverseOfChars);*/
+
+
+
+        char[] chars = str.toCharArray();
+        char[] reverseStr = new char[chars.length];
+
+
+        int i=0;
+        int length = chars.length;
+        while(i<=length){
+            reverseStr[i] = chars[length -1];
+            i++;
+            length--;
+        }
+
+        return String.valueOf(reverseStr);
     }
 
     public String reverseGivenStringUsingStringBuilder(String s){
@@ -42,6 +58,8 @@ StringBuilder stringBuilder = new StringBuilder(s);
 
 
     }
+
+
 
 
 

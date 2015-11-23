@@ -5,13 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>swathi</groupId>
-    <artifactId>dsAndAlgoByKarumanchiProlems</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>swathi</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>../chatServer</module>
-        <module>../Coursera-Algorithms</module>
-    </modules>
+
 
     <dependencies>
         <dependency>

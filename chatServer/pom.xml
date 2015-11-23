@@ -12,6 +12,10 @@
 
     <groupId>swathi</groupId>
     <artifactId>ChatServer</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>../chatApp</module>
+    </modules>
 
 
 </project>

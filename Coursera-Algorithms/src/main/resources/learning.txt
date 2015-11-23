@@ -1,0 +1,3 @@
+character space is ' ' not ''
+always use functional increment inside the loop
+make sure to consider the last word in your logic

@@ -22,8 +22,7 @@ public class SinglyLinkedListNode<T extends Comparable> {
 
     @Override
     public String toString() {
-        return "LikedListProblems.SinglyLinkedListNode{" +
-                "data=" + data +
+        return "data=" + data +
                 "next" + next +
                 '}';
     }
